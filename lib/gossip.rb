@@ -6,7 +6,7 @@ $:.unshift File.expand_path("./../THP_Gossip_Project_Sinatra", __FILE__)
 class Gossip
   attr_accessor :content, :author
   
-  def initialize(author, content)
+  def initialize(author, content) # creation de l'instance
   @content = content
   @author = author
   end
