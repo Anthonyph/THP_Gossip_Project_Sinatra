@@ -4,7 +4,7 @@
 <h2> Bienvenue dans mon repo </h2>
 
 
-<p> ce repo contient mon travail du jour1 de la semaine 4 de THP </p>
+<p> ce repo contient mon travail du jour1 de la semaine 4 de THP, tu vas pouvoir écrire des potins et les stocker</p>
 
 <p> Pour le lancer il faut lancer le serveur sur le terminal $shotgun -p 4567 puis aller dans le navigateur http://localhost:4567/ </p>
 
@@ -29,4 +29,4 @@
 </p>
 3 directories, 11 files
 
-<p> à bientôt ! </p>
+<p> à bientôt ! et bon courage </p>
