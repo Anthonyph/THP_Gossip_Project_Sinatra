@@ -10,21 +10,23 @@
 
 <h2> Structure du repo </h2>
 
- ├── config.ru
-├── db
-│   └── gossip.csv
-├── Gemfile
-├── Gemfile.lock
-├── lib
-│   ├── controller.rb
-│   ├── gossip.rb
-│   └── views
-│       ├── edit.erb
-│       ├── index.erb
-│       ├── new_gossip.erb
-│       └── show.erb
-└── README.md
+<p> 
+├── config.ru</br>
+├── db</br>
+│   └── gossip.csv</br>
+├── Gemfile</br>
+├── Gemfile.lock</br>
+├── lib</br>
+│   ├── controller.rb</br>
+│   ├── gossip.rb</br>
+│   └── views</br>
+│       ├── edit.erb</br>
+│       ├── index.erb</br>
+│       ├── new_gossip.erb</br>
+│       └── show.erb</br>
+└── README.md</br>
 
+</p>
 3 directories, 11 files
 
 <p> à bientôt ! </p>
