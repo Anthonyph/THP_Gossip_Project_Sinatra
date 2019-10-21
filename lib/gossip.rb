@@ -41,7 +41,7 @@ class Gossip
     end
     return all_gossips
   end
-  
+  #renvoie un potin à un id donné
   def self.find(id)
     index = id.to_i - 1
     all_gossips = self.all 
@@ -51,16 +51,15 @@ class Gossip
     return all_gossips[index]
   end
 
-  def self.update(gossip_author_edit, gossip_content_edit, id) #modifie @content comme le change state du morpiontre
-  
-  index = id.to_i - 1
-  rows_array =  CSV.open("./db/gossip.csv", "w") #append line 'a+
-  
- rows_array[index][0] = gossip_author_edit
- rows_array[index][1] = gossip_content_edit
-  
-  return rows_array
-  end
+  def self.update(author, content, id)
 
+    row_array = CSV.read('db/gossip.csv')
+    row_array.each.with_index do |row, index| 
+      if (id.to_i + 1 ) == index
+        row_array[index] = [author, content]
+      end
+    end
+    CSV.open('db/gossip.csv', 'wb') { |csv| row_array.each{|row| csv << row}}
+  end
 
 end # end of class

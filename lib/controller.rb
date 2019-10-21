@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :index, locals: {gossips: Gossip.all}
   end
-  
+  #page de creation d'un nouveau gossip
   get '/gossips/new/' do
     erb :new_gossip
   end
@@ -34,8 +34,9 @@ class ApplicationController < Sinatra::Base
   end
 
     post '/gossips/:id/edit' do
-    Gossip.new.update(params["gossip_author_edit"],params["gossip_content_edit"],params['id'])
+    Gossip.update(params["gossip_author"], params["gossip_content"], params[:id].to_i)
     redirect '/'
+    puts "pourquoi tu marches pas toi ?"
     end
 
 end
