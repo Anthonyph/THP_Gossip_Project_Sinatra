@@ -29,4 +29,13 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
+  get '/gossips/:id/edit' do
+    erb :edit
+  end
+
+    post '/gossips/:id/edit' do
+    Gossip.new.update(params["gossip_author_edit"],params["gossip_content_edit"],params['id'])
+    redirect '/'
+    end
+
 end

@@ -11,15 +11,15 @@ class Gossip
   @author = author
   end
 
-  def save #méthode pour enregistrer des gossips
+  def save_a_moi #méthode pour enregistrer des gossips
     File.open("./db/gossip.csv", "a+") do |file| #append line 'a+'
-      file.puts author+","+content
+      file.puts author + "," + content
     end
   end 
 
-  def save_du_cours
+  def save
     CSV.open("./db/gossip.csv", "ab") do |csv|
-      csv << ["Mon super auteur", "Ma super description"]
+      csv << [author, content]
     end
   end 
 
@@ -51,6 +51,16 @@ class Gossip
     return all_gossips[index]
   end
 
+  def self.update(gossip_author_edit, gossip_content_edit, id) #modifie @content comme le change state du morpiontre
+  
+  index = id.to_i - 1
+  rows_array =  CSV.open("./db/gossip.csv", "w") #append line 'a+
+  
+ rows_array[index][0] = gossip_author_edit
+ rows_array[index][1] = gossip_content_edit
+  
+  return rows_array
+  end
+
+
 end # end of class
-
-

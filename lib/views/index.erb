@@ -11,12 +11,12 @@
 
 <h2>Voici l'index de la liste des potins !! </h2>
 
-<% i=0 %>
-<% gossips.each do |gossip| %>
+<% gossips.each_with_index do |gossip, index_g| %>
         <p>
-          <%= i += 1 %> - Auteur <%= gossip.author %> - <%= gossip.content %> - <a href="/gossips/<%=i%>">lien en exclu ici !</a>
+          <%=index_g + 1%> - Auteur <%= gossip.author %> - <%= gossip.content %> - <a href="/gossips/<%=index_g+1%>">lien en exclu ici !</a>
         <p>
       <% end %>
-      
+
   </body>
 </html>
+
